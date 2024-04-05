@@ -1,0 +1,29 @@
+// Function to find drivers' names matching the provided string
+function findMatching(drivers, query) {
+    return drivers.filter(driver =>
+      driver.toLowerCase() === query.toLowerCase()
+    );
+  }
+  
+  // Function to find drivers' names starting with provided letters
+  function fuzzyMatch(drivers, letters) {
+    return drivers.filter(driver =>
+      driver.toLowerCase().startsWith(letters.toLowerCase())
+    );
+  }
+  
+  // Function to find driver objects whose name property matches the provided string
+  function matchName(drivers, name) {
+    return drivers.filter(driver =>
+      driver.name.toLowerCase() === name.toLowerCase()
+    );
+  }
+  
+  module.exports = {
+    findMatching,
+    fuzzyMatch,
+    matchName
+  };
+  
+  
+  
